@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticketing</title>
+        <style type="text/css">
+            .formstyle{
+                padding: 10px;
+            }
+            .formstyle select,input{
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <h2>Welcome to the Movie Ticket Booking System</h2>
+            <form name="movietitles" method="get" class="formstyle" action="theater.html">
+                <h3>Select Movie</h3>
+                <select name="moviet" id="mt" required>
+                    <option></option>
+                    <option>Yentha Vaadu Gaanie</option>
+                    <option>Singham 123</option>
+                    <option>Asura</option>
+                    <option>San Andreas</option>
+                </select>
+                <h3>Select Date</h3>
+                <div onclick="dateCheck()">
+                 <input type="date" required name="dn" id="dt"/>
+                </div>
+                <h3>Theater Name</h3>
+                <select name="theater" id="tt" required>
+                    <option></option>
+                    <option>Sushma</option>
+                    <option>Sampoorna</option>
+                    <option>Vishnu</option>
+                    <option>Megha</option>
+                    <option>Vijaya Lakshmi</option>
+                </select>
+                <h3>Show Time</h3>
+                <select name="shwtme" id="st" required>
+                    <option></option>
+                    <option>11.00 AM</option>
+                    <option>02.00 PM</option>
+                    <option>06.00 PM</option>
+                    <option>09.00 PM</option>
+                </select>
+                <h3>No. of Tickets</h3>
+                <select name="not" id="nt" required>
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+                <p align="center"><button type="submit">Submit Data</button></p>
+            </form>
+        </div>
+    <script type="text/javascript" src="moviedetails.js"></script>
+    </body>
+</html>

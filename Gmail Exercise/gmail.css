@@ -1,0 +1,161 @@
+.header, .content{
+    text-align: center;
+}
+.header img{
+    margin-top: 17px;
+    height: 38px;
+    width: 116px;
+}
+.banner{
+    font-family: 'Open Sans', arial;
+    color: #555;
+    font-style: normal;
+}
+.banner h1{
+    margin-top: 16px;
+    font-size: 38px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.banner h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.main-content .part-one{
+    background-color: #f7f7f7;
+    height: 315px;
+    width: 350px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+.circle img{
+    position: absolute;
+    top: 35px;
+    left: 130px;
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+}
+.signinform, .button{
+    position: relative;
+    top: 150px;
+}
+.signinform input{
+    height: 38px;
+    width: 71%;
+    border: 1px solid #b9b9b9;
+    /*box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+    margin-left: 10px;
+    margin-bottom: auto;
+    margin-bottom: auto;
+    border-radius: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 16px;
+}
+/*.signinform input::-webkit-input-placeholder {
+	   padding-left: 10px;
+	}*/
+.button{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.button-submit{
+    left: 1px;
+    height: 35px;
+    width: 267px;
+    left: 46px;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    top: 10px;
+    color: #fff;
+    font-weight:bold;
+    display: block;
+    border-radius: 3px;
+}
+.button-submit:hover{
+    border-bottom: 1px solid #2f5bb7;
+}
+.need-help{
+    position: absolute;
+    top: 55px;
+    right: 37px;
+    color: rgb(66, 127, 237);
+    text-decoration: none;
+    font-weight: 500;
+}
+.need-help:hover{
+    text-decoration: underline;
+}
+.part-two{
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    display: block;
+    padding-top: 25px;
+}
+.part-two a{
+    color: rgb(66, 127, 237);
+    text-decoration: none;
+}
+.part-two a:hover{
+    text-decoration:underline;
+}
+.part-two p{
+    font-size: 14px;
+    margin-top: 30px;
+}
+.part-two img{
+    width: 212px;
+}
+.footer{
+    position: relative;
+    top: 90px;
+    border-top: 1px solid #CECECE;
+    margin-bottom: 50px;
+}
+.left-footer{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    list-style: none;
+    float: left;
+    top: 10px;
+}
+.right-footer{
+    float: right;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.right-footer img{
+    position: absolute;
+    right: 170px;
+}
+.right-footer select{
+    height: 24px;
+    width: 165px;
+}
+.left-footer li{
+    position: absolute;
+}
+.left-footer li a{
+    text-decoration: none;
+    color: darkgrey;
+}
+.left-footer li a:hover{
+    text-decoration: underline;
+}
+.left-footer li:nth-child(2){
+    left: 130px;
+}
+.left-footer li:nth-child(3){
+    left: 185px;
+}
+.left-footer li:nth-child(4){
+    left: 234px;
+}
