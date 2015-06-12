@@ -1,0 +1,207 @@
+body{
+    background-image: url("bgimg.PNG");
+    font-family: Arial, sans-serif;
+}
+.main-content{
+    width: 646px;
+    background-color: white;
+    margin: auto; 
+    padding-bottom: 10px;
+}
+.updates h3{
+    padding: 20px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+}
+.list-feed{
+    padding-left: 21px;
+}
+.feed-data{
+    display: list-item;
+    text-align: left;
+    margin-right: 20px;
+    list-style: none;
+    border-top: 1px solid #eee;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.feed-head{
+    display: inline;
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 6px;
+    margin-right: 20px;
+}
+.feed-head a{
+    color: #0077b5;
+    text-decoration: none;
+}
+.feed-head .title{
+    font-weight: bold;
+}
+.feed-head a:hover{
+    text-decoration: underline;
+}
+.feed-body{
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 20px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+.feed-img{
+    height: 110px;
+    float: left;
+    margin-right: 15px;
+}
+.feed-text .feed-title{
+    font-size: 14px;
+    line-height: 18px;
+}
+.feed-title a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.feed-title a:hover{
+    color: #0077b5;
+}
+.feed-note a{
+    font-size: 13px;
+    line-height: 14px;
+    font-weight: bold;
+    color: #66696a;
+    text-decoration: none;
+    padding-right: 14px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.feed-note a:hover{
+    color: #0077b5;
+}
+.feed-note span{
+    font-size: 13px;
+    line-height: 17px;
+    box-sizing: border-box;
+}
+.feed-item-meta{
+    margin-top: 7px;
+}
+.point{
+    position: relative;
+    top: 6px;
+    margin-left: -29px;
+    margin-right: -3px;
+}
+.point1{
+    position: relative;
+    top: -3px;
+    left: -7px;
+}
+.feed-interests{
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+}
+.feed-interests li{
+    margin-right: 10px;
+}
+.feed-interests li a{
+    font-size: 13px;
+    text-align: left;
+    color: #a3a3a3;
+    text-decoration: none;
+}
+.feed-interests li a:hover{
+    color: #0077b5;
+}
+.feed-like-comnt{
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+}
+.feed-likers{
+    padding-top: 8px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #eee;
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+}
+.like-list{
+    display: flex;
+}
+.feed-like-comnt span img{
+    /*position: relative;
+    left: -31px;
+    top: 4px;*/
+    vertical-align: -webkit-baseline-middle;
+    padding-left: 5px;
+}
+.feed-likers li a{
+    font-size: 12px;
+    line-height: 17px;
+    color: #0077b5;
+    text-decoration: none;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.feed-likers li a:hover{
+    text-decoration: underline;
+}
+.feed-likers li .count{
+    text-decoration: none;
+    color: #8f8f8f;
+}
+.old-cmnts, .cmnt{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 17px;
+}
+.cmntimg img{
+    position: relative;
+    left: -9px;
+    top: -5px;
+}
+.cmnt a{
+    position: relative;
+    left: -9px;
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.cmnt a:hover{
+    color: #0077b5;
+}
+.old-cmnts li{
+    list-style: none;
+}
+.commentbox{
+    padding: 6px 9px 7px 10px;
+    border-top: 1px solid #fff;
+    height: 180px;
+}
+.commentbox textarea{
+    border: 1px solid #eee;
+    padding: 5px 10px 5px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    width: 542.5px;
+    box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.15);
+    height: 16px;
+    resize: none;
+}
+.commentbox button{
+    margin-left: 475px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #2672ae;
+    opacity: 0.6;
+    border: 1px solid;
+    font-weight: bold;
+    color: #ddebf2 !important;
+    border-radius: 3px;
+    width: 84px;
+    height: 28px;
+}
