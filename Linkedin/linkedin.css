@@ -13,9 +13,11 @@ body{
     font-size: 16px;
     line-height: 18px;
     font-weight: bold;
+    margin: 0px;
 }
 .list-feed{
     padding-left: 21px;
+    margin: 0px;
 }
 .feed-data{
     display: list-item;
@@ -121,6 +123,7 @@ body{
     margin-right: 20px;
     background-color: #f4f4f4;
     border-radius: 3px;
+    height: 250px;
 }
 .feed-likers{
     padding-top: 8px;
@@ -134,15 +137,12 @@ body{
     display: flex;
 }
 .feed-like-comnt span img{
-    /*position: relative;
-    left: -31px;
-    top: 4px;*/
     vertical-align: -webkit-baseline-middle;
-    padding-left: 5px;
+    padding-left: 9px;
 }
 .feed-likers li a{
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 18px;
     color: #0077b5;
     text-decoration: none;
     vertical-align: middle;
@@ -160,22 +160,62 @@ body{
     font-size: 13px;
     line-height: 17px;
 }
-.cmntimg img{
-    position: relative;
-    left: -9px;
-    top: -5px;
+.commentbox .cmntimg img{
+    vertical-align: middle;
+    padding-left: 0px;
 }
 .cmnt a{
-    position: relative;
-    left: -9px;
     text-decoration: none;
     color: #a3a3a3;
 }
 .cmnt a:hover{
     color: #0077b5;
 }
+.cmnt{
+    padding: 8px 0px 9px 0px;
+}
+.old-cmnts{
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
 .old-cmnts li{
     list-style: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0px 0px 5px 0px;
+    display: flex;
+}
+.old-cmnts li div{
+    display: inline-block;
+    color: #333;
+}
+.old-cmnts li span img{
+    vertical-align: baseline;
+    margin-right: 7px;
+}
+.old-cmnts li a{
+    color: #0077b5;
+    text-decoration: none;
+}
+.old-cmnts li a:hover{
+    text-decoration: underline;
+}
+.old-cmnts li .time{
+    display: block;
+    color: #66696a;
+    line-height: 14px;
+    font-size: 12px;
+}
+.cmtsdata, .cmtsdata1{
+    margin-right: 6px;
+}
+.cmtsdata1 {
+    margin-left: 27px;
+}
+.cmtsdata span{
+    padding: 0px;
 }
 .commentbox{
     padding: 6px 9px 7px 10px;
