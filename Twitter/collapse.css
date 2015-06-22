@@ -1,0 +1,11 @@
+ul,li{
+    list-style: none;
+    padding: 0px;
+    cursor: pointer;
+}
+.sizeli{
+    height: 100px;
+    cursor: pointer;
+    padding-left: 215px;
+    padding-top: 10px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitter</title>
+        <link href="twitter.css" rel="stylesheet" type="text/css" />
+        <link href="collapse.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="content" id="content">
+            <div class="pageheader">
+                <p>Your timeline</p>
+            </div>
+            <div class="tweets" data-bind="foreach: tweets">
+                <div class="line"></div>
+                <ul class="tweet" id="tweet">
+                    <li class="tweet-head" data-bind="attr: {id:'expand'+id}">
+                        <div rowspan="3" class="logo">
+                            <a href="#"><img class="size" alt="logo" data-bind="attr: {src: image}"/></a>
+                        </div>
+                        <div class="title"><a href="#" id="name">
+                            <span class="name" data-bind="text: name"></span>
+                            <span class="username" data-bind="text: username"></span>
+                        </a></div>
+                        <div class="timestamp"><a href="#" id="timestamp" data-bind="text: timestamp"></a></div>
+                    <ul class="tweet-body">
+                        <li colspan="2" class="text" data-bind="html: tex+' '+'<a  href=\'#\'>'+ hashtag +'</a>'">
+                            ></li>
+                    </ul>
+                    <ul class="tweet-foot">
+                        <li class="view-details">
+                            <a href="" id="viewdetails"><span>View Details</span></a>
+                            <span class="dot">.</span>
+                            <span class="tweet-acts">
+                                <a href="" id="reply"><span class="reply"></span></a>
+                                <a href="" id="rt"><span class="retweet"></span></a>
+                                <a href="" id="fav"><span class="fav"></span></a>
+                            </span>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="knockout.js"></script>
+        <script type="text/javascript" src="zepto.js"></script>
+        <script type="text/javascript" src="array.js"></script>
+    </body>
+</html>
