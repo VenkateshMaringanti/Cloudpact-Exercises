@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="css/twitter.css" rel="stylesheet" type="text/css" />
         <link href="css/collapse.css" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" rel="stylesheet" type="text/css" />
     </head>
     <body onload="loadData()">
         <div class="content" id="content">
@@ -16,7 +17,7 @@
                 <ul class="tweet" id="tweet">
                     <li class="tweet-head" data-bind="attr: {id:'expand'+id}">
                         <div rowspan="3" class="logo">
-                            <a href="#"><img class="size" alt="logo" data-bind="attr: {src: image}"/></a>
+                            <a href="#"><img class="size" data-bind="attr: {src: image}"/></a>
                         </div>
                         <div class="title"><a href="#" id="name">
                             <span class="name" data-bind="text: name"></span>
@@ -25,7 +26,7 @@
                         <div class="timestamp"><a href="#" id="timestamp" data-bind="text: timestamp"></a></div>
                         <ul class="tweet-body">
                             <li colspan="2" class="text" data-bind="html: tex+' '+'<a  href=\'#\'>'+ hashtag +'</a>'">
-                                ></li>
+                                </li>
                         </ul>
                         <ul class="tweet-foot">
                             <li class="view-details">

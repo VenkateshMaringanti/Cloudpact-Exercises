@@ -37,7 +37,6 @@ var tweetarray = {
         "hashtag": "#BanvsInd"
     }
 ]};
-ko.applyBindings(tweetarray);
 
 /*var len = tweetarray.tweets.length;
 for( var i=1; i<=len; i++ ){
@@ -57,47 +56,61 @@ lists.click(function(event){
 })
 .children('ul').hide();*/
 
-
 function loadData(){
+    ko.applyBindings(tweetarray);
     var lists = document.getElementsByClassName("tweet-head");
     var b = new Array();
     for( var i=1; i<=lists.length; i++){
         var ele = document.getElementById("expand"+i);
-        $(ele).children('ul').hide();
+        $(ele).on('ready', function(){
+            ele.idx = i;
+            $(ele).children('ul').hide();
+            animationLoad(ele, "wobble");
+        });
         b[i] = new object(ele);
         b[i].callFunction(ele);
     }
-}
+    function animationLoad(element, animation){
+        //console.log("Adding animation - " + element.idx + " - " + animation);
+        $(element).addClass('animated ' + animation);
+        window.setTimeout( function(){
+            //console.log("Removing animation - " + element.idx + " - " + animation);
+            $(element).removeClass('animated ' + animation);
+        }, 2000);
+    };
 
-object.prototype.onMouseDown = function(){
-    this.changeClass("tweet-head1");
-}
-object.prototype.onMouseUp = function(){
-    this.changeClass("tweet-head1");
-}
-object.prototype.onMouseClick = function(){
-    this.changeClass("tweet-head");
-    this.expand();
-}
-object.prototype.onMouseOut = function(){
-    this.changeClass("tweet-head");
-}
+    object.prototype.onMouseDown = function(){
+        this.addClass("tweet-head1");
+    }
+    /*object.prototype.onMouseUp = function(){
+        this.addClass("tweet-head1");
+    }*/
+    object.prototype.onMouseClick = function(){
+        animationLoad(this.el, "rubberBand");
+        this.expand();
+        this.removeClass("tweet-head1");
+    }
+    object.prototype.onMouseOut = function(){
+        this.removeClass("tweet-head1");
+    }
 
-object.prototype.onTouchS = function(){
-    this.changeClass("tweet-head1");
-}
-object.prototype.onTouchE = function(){
-    this.changeClass("tweet-head");
-    this.expand();
-}
-object.prototype.onTouchL = function(){
-    this.changeClass("tweet-head");
-}
-object.prototype.onTouchC = function(){
-    this.changeClass("tweet-head");
-}
+    object.prototype.onTouchS = function(){
+        this.addClass("tweet-head1");
+    }
+    object.prototype.onTouchE = function(){
+        animationLoad(this.el, "rubberBand");
+        this.removeClass("tweet-head1");
+        this.expand();
+    }
+    object.prototype.onTouchL = function(){
+        this.removeClass("tweet-head1");
+    }
+    object.prototype.onTouchC = function(){
+        this.removeClass("tweet-head1");
+    }
 
-object.prototype.expand = function(){
-    var ele = this.el;
-    $(ele).children('ul').toggle();
+    object.prototype.expand = function(){
+        var ele = this.el;
+        $(ele).children('ul').toggle();
+    }
 }

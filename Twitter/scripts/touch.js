@@ -1,4 +1,4 @@
-var mc;
+var mc = new Array();
 function loadData(){
     var lists = document.getElementsByClassName("tweet-head");
     var b = new Array();
@@ -8,12 +8,12 @@ function loadData(){
         $(ele).children('ul').hide();
         b[i] = new object(ele);
         b[i].callFunction(ele);
+        mc[i].on("press", function() {
+            this.expand();
+        });
     }
 }
-mc.add( new Hammer.Tap({ event: 'singletap' }) );
-mc.on("singletap", function(ev) {
-    this.expand();
-});
+
 object.prototype.expand = function(){
     var ele = this.el;
     $(ele).children('ul').toggle();

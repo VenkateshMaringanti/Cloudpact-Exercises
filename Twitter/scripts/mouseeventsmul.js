@@ -26,7 +26,7 @@ object.prototype.onDown = function(e){
     }
     this.onMouseDown();
     //this.changeClass("pressed");
-    logMesage("Mouse Down");
+    console.log("Mouse Down");
     this.el.onmouseup = function(){
         that.mouseUp();
     }
@@ -42,15 +42,15 @@ object.prototype.onDown = function(e){
 }
 
 object.prototype.mouseMve = function(){
-    logMesage("Mouse Move");
+    console.log("Mouse Move");
 }
 object.prototype.mouseOvr = function(){
-    logMesage("Mouse Over");
+    console.log("Mouse Over");
 }
 object.prototype.mouseUp = function(){
     this.onMouseUp();
     //this.changeClass("bt");
-    logMesage("Mouse Up");
+    console.log("Mouse Up");
 }
 object.prototype.onMouseDown = function(){};
 object.prototype.onMouseUp = function(){};
@@ -64,10 +64,10 @@ object.prototype.mouseClick = function(){
     this.el.oncontextmenu = null;
     this.el.onmouseout = null;
     this.onMouseClick();
-    logMesage("Mouse Click");
+    console.log("Mouse Click");
 }
 object.prototype.dblClick = function(){
-    logMesage("Double Click");
+    console.log("Double Click");
 }
 object.prototype.mouseOut = function(){
     //this.changeClass("bt");
@@ -76,12 +76,20 @@ object.prototype.mouseOut = function(){
     this.el.onmouseup = null;
     this.el.ondblclick = null;
     this.onMouseOut();
-    logMesage("Mouse Out");
+    console.log("Mouse Out");
     this.el.onmouseout = null;
 }
 
-object.prototype.changeClass = function(classname){
+/*object.prototype.changeClass = function(classname){
     this.el.className = classname;
+}*/
+object.prototype.addClass = function(classname){
+    this.el.className += ' '+classname;
+}
+
+object.prototype.removeClass = function(classname){
+    var str = this.el.className;
+    this.el.className = str.replace(classname, "");
 }
 
 object.prototype.onTouchS = function(){};
@@ -90,17 +98,14 @@ object.prototype.onTouchL = function(){};
 object.prototype.onTouchC = function(){};
 
 object.prototype.onTouchStart = function(e){
-    logMesage("Touch Started");
+    event.preventDefault();
+    console.log("Touch Started");
     //this.changeClass("pressed");
     var that = this;
     this.onTouchS();
     this.on_Cancel = function(){ 
         that.onTouchCancel(); 
     };
-    /*this.on_Leave = function(e){
-        alert("Hi");
-        that.onTouchLeave(e); 
-    }*/
     this.on_Move = function(event){
         that.onTouchMove(event);
     }
@@ -108,7 +113,6 @@ object.prototype.onTouchStart = function(e){
         that.onTouchEnd();
     }
     this.el.addEventListener("touchcancel", this.on_Cancel, false);
-    //this.el.addEventListener("touchleave", this.on_Leave, false);
     this.el.addEventListener("touchmove", this.on_Move, false);
     this.el.addEventListener("touchend", this.on_End, false);
 }
@@ -118,7 +122,7 @@ object.prototype.onTouchEnd = function(){
     this.el.onmousedown = null;
     this.onTouchE();
     this.el.removeEventListener("touchmove", this.on_Move, false);
-    logMesage("Touch Ended");
+    console.log("Touch Ended");
     this.el.removeEventListener("touchend", this.on_End, false);
 }
 
@@ -127,7 +131,7 @@ object.prototype.onTouchCancel = function(){
     this.el.onmousedown = null;
     this.onTouchC();
     this.el.removeEventListener("touchmove", this.on_Move, false);
-    logMesage("Touch Cancelled");
+    console.log("Touch Cancelled");
     this.el.removeEventListener("touchcancel", this.on_Cancel, false);
 }
 
@@ -137,11 +141,11 @@ object.prototype.onTouchLeave = function(){
     this.el.removeEventListener("touchend", this.on_End, false);
     this.onTouchL();
     this.el.removeEventListener("touchmove", this.on_Move, false);
-    logMesage("Touch Left");
+    console.log("Touch Left");
 }
 
 object.prototype.onTouchMove = function(e){
-    logMesage("Touch Moved");
+    console.log("Touch Moved");
     var touch = e.touches[0];
     if(this.el !== document.elementFromPoint(touch.pageX,touch.pageY)){
         this.onTouchLeave();
@@ -151,19 +155,19 @@ object.prototype.onTouchMove = function(e){
 object.prototype.callFunction = function(e){
     /*e.onmousedown = function(){
         e.onmouseover = function(){
-            logMesage("Mouse Over");
+            console.log("Mouse Over");
         }
         e.onmousemove = function(){
-            logMesage("Mouse Move");
+            console.log("Mouse Move");
         }
         e.className = "pressed";
-        logMesage("Mouse Down");
+        console.log("Mouse Down");
         e.onmouseup = function(){
             e.className = "bt";
-            logMesage("Mouse Up");
+            console.log("Mouse Up");
         }
         e.onclick = function(){
-            logMesage("Clicked");
+            console.log("Clicked");
             e.onmouseover = null;
             e.onmousemove = null;
             e.onmouseup = null;
@@ -180,7 +184,7 @@ object.prototype.callFunction = function(e){
             e.onmouseup = null;
             e.ondblclick = null;
             e.onmouseout = null;
-            logMesage("Mouse Out");
+            console.log("Mouse Out");
         }
     }*/
     var that = this;
@@ -193,6 +197,6 @@ object.prototype.callFunction = function(e){
 function logMesage(msg){
     if(document.getElementById("log")){
         document.getElementById("log").innerHTML += msg + "<br>";
-        msgDiv.scrollTop += msgDiv.scrollHeight;
+        //msgDiv.scrollTop += msgDiv.scrollHeight;
     }
 }
