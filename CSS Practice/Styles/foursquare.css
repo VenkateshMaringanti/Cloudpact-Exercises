@@ -1,0 +1,50 @@
+.header{
+    background-color: #6C9EE8;
+    color: white;
+}
+.dateclas{
+    background-color: #E6E6E6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 3px 0px 4px 18px;
+    font-weight: 400;
+}
+.title{
+    color: #6C9EE8;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 12px;
+    font-weight: 500;
+}
+.img span:first-child {
+    color: lightgray;
+}
+.item div.img, div.text, div.btndiv {
+    vertical-align: top;
+    padding: 10px 15px 10px 20px;
+}
+div.text{
+    padding-left: 8px;
+}
+div.img, div.btndiv {
+    font-size: 15px;
+}
+div.text, div.btndiv {
+    border-bottom: 1px solid #E6E6E6;
+}
+.people{
+    padding-top: 5px;
+}
+.person{
+    border-radius: 50%;
+    height: 20px;
+}
+.btndiv span:first-child {
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+.btndiv span:last-child {
+    color: lightgray;
+}

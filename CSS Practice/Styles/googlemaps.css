@@ -1,0 +1,10 @@
+.header{
+    background-image: url("Images/bg.png");
+}
+.head-title{
+    font-size: 25px;
+    font-weight: 100;
+}
+.item{
+    border: 1px solid;
+}

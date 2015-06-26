@@ -1,0 +1,27 @@
+.line {
+    border-color: darkgray;
+    border-width: thin;
+}
+.img {
+    font-size: 23px;
+    color: darkgray;
+}
+div.text, div.btndiv {
+    border-bottom: 1px solid #E6E6E6;
+}
+div.text{
+    padding-left: 2px;
+}
+.btn {
+    border: 0px;
+    height: 35px;
+    width: 85px;
+    font-weight: bold;
+    padding: 0px;
+    background-color: #658EA2;
+    color: white;
+}
+.btn.select {
+    background-color: lightgray;
+    color: gray;
+}
