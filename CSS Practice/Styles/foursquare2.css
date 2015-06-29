@@ -1,7 +1,47 @@
-.dateclas{
-    display: flex;
-    padding: 10px 0px 10px 28px;
+.tab{
+    display: table;
+    border-bottom: 1px solid lightgray;
 }
-.headtitle{
-    padding-left: 490px;
+.dateclas{
+    display: table-row;
+    padding: 10px 0px 10px 28px;
+    height: 45px;
+}
+.leftl{
+    display: table-cell;
+    padding-left: 28px;
+    vertical-align: middle;
+    width: 112%;
+}
+.rightl{
+    display: table-cell;
+    text-align: right;
+    padding-right: 35px;
+    vertical-align: middle;
+    color: darkgray;
+}   
+.searchbox{
+    max-width: 162px;
+    height: 30px;
+    border: 0px;
+    padding: 0px;
+    border-radius: 500px;
+    padding-left: 30px;
+    background-image: url('../Images/search.png');
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 10px;
+}
+.title, .img{
+    color: darkgray;
+}
+.blue{
+    color: #6C9EE8;
+}
+.orange{
+    color: darkorange;
+}
+.item div.img, div.text{
+    vertical-align: middle;
+    font-size: 23px;
 }

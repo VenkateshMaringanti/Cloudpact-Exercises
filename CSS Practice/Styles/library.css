@@ -27,7 +27,7 @@ body {
 .items {
     display: table-row;
 }
-.items div {
+.items div.leftbtn, div.headtitle, div.rightbtn {
     display: table-cell;
 }
 .list-items {
